@@ -1,0 +1,3084 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'jawa';
+    src: url(/Asset/Assets/JAWAPALSU.TTF);
+}
+@font-face {
+    font-family: 'ancient';
+    src: url(/Asset/Assets/DURALITH.ttf);
+}
+
+@font-face {
+    font-family: 'wed';
+    src: url(/Asset/Assets/AlexBrush-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+
+    body{
+        overflow-y: hidden;
+    }
+
+    .muteButton {
+        position: fixed;
+        bottom: 12vh;
+        right: 2px;
+        height: 5vh;
+        width: 9vw;
+        border-radius: 25px;
+    }
+
+
+    #nav {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0vh;
+        width: 100%;
+        z-index: 6;
+    }
+
+    #nav ul {
+        background-color: #F4C3C2;
+        border-radius: 10px;
+        height: 5vh;
+    }
+
+    #nav ul li {
+        display: inline-block;
+        width: 7vw;
+        padding: 10px 5px;
+        margin-right: 0px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    #nav ul li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #nav ul li a.active {
+        background-color: #F3DAD8;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+
+    .cover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/Asset/BG/Jawa\ -\ Indonesia\ traditional\ costume\ 🇮🇩.jpeg);
+        background-size: cover; 
+        background-position: -17vh;
+        color: #FFFBDB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(0); /* Initial position */
+        transition: transform 0.5s ease-out; /* Animation effect */
+        z-index: 1000; /* Ensure the cover is above other content */
+    }
+
+    .title-cv p {
+        display: flexbox;
+        position: relative;
+        bottom: 1vh;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        letter-spacing: 5px;
+        color: rgb(255, 255, 255);
+    }
+
+    .cover.slide-up {
+        transform: translateY(-100%); /* Move up off-screen */
+    }
+
+    .close-button {
+        font-family: "Montserrat", sans-serif;
+        transition-duration: 0.5s;
+        padding: 16px 40px;
+        border: 1px solid;
+        border-radius: 5px;
+        border-radius: 10px;
+        border-color: white;
+        background-color: #ffffff5e;
+    }
+
+    .close-button:hover { 
+        padding: 40px 60px;
+        border: 1px solid;
+        border-radius: 5px;
+        border-radius: 10px;
+        border-color: rgb(255, 211, 80);
+        background-color: #ffe38f5e;
+        font-size: 20px;
+    }
+
+    .title-cv img {
+        position: relative;
+        width: 25vh;
+        height: 40vh;
+    }
+
+
+    #date_cv {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        text-decoration: none;
+        letter-spacing: 5px;
+        border-bottom: 3px solid rgb(255, 255, 255);
+    }
+
+    #name_cv {
+        position: relative;
+        width: 43vw;
+        margin: 10px;
+        font-family: 'jawa';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+        text-decoration: none;
+        letter-spacing: 4px;
+        bottom: 15vh;
+    }
+
+    #content {
+        padding: 20px;
+    }
+
+    #sc_1 {
+        height: 100vh;
+        max-width: 100vh;
+        min-height: 100vh;
+        background: url(/Asset/BG/\(1\)Cirrus\ Clouds\ Sisal\ -\ Blanched\ Wallpapers.jpeg);
+        background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    #img_tp_1{
+        width: 40vh;
+        height: 60vh;
+        border-width: 3px;
+        border-style:solid;
+        border-color:rgb(174, 134, 75);
+        border-radius: 0% 0% 250px 250px;
+        padding: 7px;
+        margin-top: -10px;
+    }
+
+    .img-l-top {
+        position: absolute;
+        left: 40px;
+        top: -40px;
+        width: 10vh;
+        z-index: 3;
+        -webkit-animation: spin1 10s linear infinite;
+        -moz-animation: spin1 10s linear infinite;
+        animation: spin1 10s linear infinite;
+    }
+    .img-r-top {
+        position: absolute;
+        right: 40px;
+        top: -40px;
+        width: 10vh;
+        z-index: 2;
+        -webkit-animation: spin2 10s linear infinite;
+        -moz-animation: spin2 10s linear infinite;
+        animation: spin2 10s linear infinite;
+    }
+
+    .img-l-bot {
+        position: fixed;
+        left: 40px;
+        top: 90vh;
+        width: 10vh;
+        z-index: 3;
+        -webkit-animation: spin1 10s linear infinite;
+        -moz-animation: spin1 10s linear infinite;
+        animation: spin1 10s linear infinite;
+        display: none;
+    }
+    .img-r-bot {
+        position: fixed;
+        right: 40px;
+        top: 90vh;
+        width: 10vh;
+        z-index: 3;
+        -webkit-animation: spin2 10s linear infinite;
+        -moz-animation: spin2 10s linear infinite;
+        animation: spin2 10s linear infinite;
+        display: none;
+    }
+    
+    .txt-quote {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        padding: 2vh;
+        font-size: 13px;
+    }
+
+    .flower-bottom-sc1 {
+        display: none;
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        bottom: 5vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    /* Section 2*/
+
+    .sc-2 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background-color: #FAEDCA;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-sc2 {
+        font-family: 'wed';
+        font-size: 5vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+    }
+
+    .flower-bottom-sc2 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 182vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .flower-top-sc2 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 43vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc2 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 3*/
+
+    .sc-3 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background-color: #FAEDCA;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-sc3 {
+        font-family: 'wed';
+        font-size: 5vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+    }
+
+    
+
+    .flower-top-sc3 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc3 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 282vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 4 / Akad*/
+
+    .sc-4 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc4 h1 {
+        font-family: 'wed';
+        font-size: 7vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+        padding: 5px;
+    }
+
+    .heading-1-sc4 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 150px 150px 150px 150px;
+        margin: 0px;
+        padding: 40px;
+        top: 10vh;
+    }
+
+
+    .flower-top-sc3 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc4 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 5 / Map*/
+
+    .sc-5 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc5 h1 {
+        font-family: 'wed';
+        font-size: 7vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+        padding: 5px;
+    }
+
+    .heading-1-sc5 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 0px 0px 150px 150px;
+        height: 73vh;
+        margin: 10px;
+        padding: 10px;
+        top: 2vh;
+    }
+
+
+    .flower-top-sc5 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc5 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 6*/
+
+    .sc-6 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background-color: #fffcf5;
+        background: url(/Asset/BG/Photos\ Parchemin\,\ 60\ 000+\ photos\ de\ haute\ qualité\ gratuites.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-sc6 {
+        font-family: 'wed';
+        font-size: 5vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+    }
+
+    
+
+    .flower-top-sc6 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc6 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 282vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top-sc6 {
+        display: inline-block;
+        justify-content: center;
+        width: 50vw;
+        height: 34vh;
+        margin-top: 2vh;
+        padding: 5px;
+        margin-top: 6px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc6 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .slider {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slider:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Section 12*/
+
+    .sc-12 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background-color: #fffcf5;
+        background: url(/Asset/BG/Photos\ Parchemin\,\ 60\ 000+\ photos\ de\ haute\ qualité\ gratuites.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-sc12 {
+        font-family: 'wed';
+        font-size: 5vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+    }
+
+    
+
+    .flower-top-sc12 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc12 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 282vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top-sc12 {
+        display: inline-block;
+        justify-content: center;
+        width: 50vw;
+        height: 34vh;
+        margin-top: 2vh;
+        padding: 5px;
+        margin-top: 6px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc6 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .slider {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slider:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+        /* Section 5 / Map*/
+
+    .sc-5 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc5 h1 {
+        font-family: 'wed';
+        font-size: 7vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+        padding: 5px;
+    }
+
+    .heading-1-sc5 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 0px 0px 150px 150px;
+        height: 73vh;
+        margin: 10px;
+        padding: 10px;
+        top: 2vh;
+    }
+
+
+    .flower-top-sc5 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc5 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 7 / Story*/
+
+    .sc-7 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc7 h1 {
+        font-family: 'wed';
+        font-size: 6vh;
+        letter-spacing: 3px;
+        font-weight: 400;
+        padding-top: 3vh;
+        z-index: 1;
+    }
+
+    .heading-1-sc7 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 50px 50px 50px 50px;
+        height: 78vh;
+        margin: 10px;
+        padding: 10px;
+        top: -3vh;
+    }
+
+
+    .flower-top-sc7 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc7 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .story-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding-left: 5vh;
+    }
+    
+    /* Track yang menampung semua slide */
+    .story-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+    }
+    
+    /* Setiap slide */
+    .story-slide {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .story-slide img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .description {
+        margin-top: 15px;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    .prev-button, .next-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 10;
+    }
+    
+    /* Posisi tombol kiri dan kanan */
+    .prev-button {
+        left: 10px;
+    }
+    
+    .next-button {
+        right: 10px;
+    }
+    
+    .prev-button:hover, .next-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Responsive styling */
+    @media screen and (max-width: 768px) {
+        .description {
+            font-size: 14px;
+        }
+    }
+
+    /* Section 8 / RSVP*/
+
+    .sc-8 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/\(1\)Cirrus\ Clouds\ Sisal\ -\ Blanched\ Wallpapers.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc8 h1 {
+        font-family: 'jawa';
+        font-size: 4vh;
+        letter-spacing: 3px;
+        font-weight: 500;
+        padding-top: 3vh;
+        padding: 2vh;
+        z-index: 1;
+    }
+
+    .heading-1-sc8 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #fffcf5;
+        border-radius: 50px 50px 50px 50px;
+        height: 78vh;
+        margin: 10px;
+        padding: 10px;
+        top: -3vh;
+    }
+
+
+    .flower-top-sc8 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc8 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top-sc8 {
+        display: flex;
+        justify-content: center;
+        width: 87vw;
+        margin-top: 1vh;
+        border-radius: 5vh;
+        border-color: rgb(174, 134, 75);
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .btn-rsvp {
+        position: relative;
+        text-align: center;
+        width: 50%;
+        top: 8vh;
+        padding: 8px;
+        background-color: #fcdc90;
+        color: white;
+        cursor: pointer;
+        border-style: none;
+        border-radius: 25px;
+        font-family: 'web';
+        font-size: 20px;
+    }
+    /* RSVP */
+    .btn-rsvp:hover {
+        background-color: #f4cf7a;
+    }
+
+    .popup {
+        display: none; 
+        position: fixed;
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+    }
+    
+    .popup-content {
+        background-color: #fefefe;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; 
+    }
+
+    .popup-content h2 {
+        font-family: 'jawa';
+    }
+
+    .popup-content label {
+        font-family: 'ancient';
+    }
+
+    .popup-content input {
+        border-radius: 10px;
+    }
+
+    .popup-content textarea {
+        display: block;
+        border-radius: 5px;
+        height: 5vh;
+        width: 70vw;
+    }
+
+    .btn-submit {
+        position: relative;
+        text-align: center;
+        width: 50%;
+        padding: 8px;
+        background-color: #fcdc90;
+        color: white;
+        cursor: pointer;
+        border-style: none;
+        border-radius: 25px;
+        font-family: 'web';
+        font-size: 20px;
+    }
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Section 9 / Tamu Species*/
+
+    .sc-9 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc9 h1 {
+        font-family: 'wed';
+        font-size: 6vh;
+        letter-spacing: 3px;
+        font-weight: 400;
+        padding-top: 3vh;
+        z-index: 1;
+    }
+
+    .heading-1-sc9 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 50px 50px 50px 50px;
+        height: 70vh;
+        margin: 10px;
+        padding: 10px;
+        top: 5vh;
+    }
+
+
+    .flower-top-sc9 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc9 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    table,th,td {
+        border: 2px solid rgb(0, 0, 0);
+        border-collapse: collapse;
+        font-size: 20px;
+    }
+    
+
+    td {
+        padding: 5px;
+    }
+
+    th {
+        background-color: #f4cf7a;
+    }
+
+    /* Section 10 / Gift*/
+
+    .sc-10 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc10 h1 {
+        font-family: 'wed';
+        font-size: 6vh;
+        letter-spacing: 3px;
+        font-weight: 400;
+        padding-top: 3vh;
+        margin-top: 5vh;
+        z-index: 1;
+    }
+
+    .box1 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #f4cf7a;
+        height: 25vh;
+        margin: 10px;
+        padding: 5px;
+        top: -3vh;
+        margin-top: 2vh;
+    }
+
+    .box2 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #f4cf7a;
+        height: 25vh;
+        margin: 10px;
+        padding: 5px;
+        top: -3vh;
+        margin-top: 11vh;
+    }
+
+
+    .flower-top-sc10 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc10 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .box1 input {
+        display: block;
+        border-style: none;
+        background-color: #FAEDCA;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: #8b7332;
+        right: 5vh;
+        width: 15vw;
+    }
+
+    .box2 input {
+        display: block;
+        border-style: none;
+        background-color: #FAEDCA;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: #8b7332;
+        right: 5vh;
+        width: 15vw;
+    }
+
+
+    .box1 img {
+        position: relative;
+        width: 20vw;
+        bottom: 0vh;
+    }
+
+    .box1 p {
+        display: block;
+        width: 30vw;
+        bottom: 2vh;
+    }
+
+    .box2 img {
+        position: relative;
+        width: 10vw;
+        bottom: 0vh;
+    }
+
+    .box2 p {
+        display: block;
+        width: 30vw;
+        bottom: 2vh;
+    }
+
+
+    #copyButton {
+        padding: 5px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #f4cf7a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    #copyButton:hover {
+        background-color: #e5b953;
+    }
+
+    /* Section 11 / Letters*/
+
+    .sc-11 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc11 h1 {
+        position: relative;
+        font-family: 'wed';
+        font-size: 6vh;
+        letter-spacing: 3px;
+        font-weight: 400;
+        padding-top: 3vh;
+        z-index: 1;
+        bottom: 3vh;
+    }
+
+    .heading-1-sc11 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 50px 50px 50px 50px;
+        height: 39vh;
+        margin: 10px;
+        padding: 10px;
+        top: -3vh;
+    }
+
+    .heading-2-sc11 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 50px 50px 50px 50px;
+        height: 34vh;
+        margin: 10px;
+        padding: 10px;
+        top: 10vh;
+    }
+
+    .flower-top-sc11 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc11 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .message-container h2 {
+        display: block;
+        position: relative;
+        width: 70vw;
+        font-size: 15px;
+        right: 3vh;
+    }
+
+    .message-container textarea {
+        display: block;
+        border-radius: 5px;
+        height: 5vh;
+        width: 80vw;
+    }
+
+    .pesan-txt {
+        position: relative;
+        top: 5vh;
+    }
+
+    .message-container select {
+        display: block;
+        border-radius: 5px;
+        height: 3vh;
+        width: 80vw;
+    }
+
+    .message-container label {
+        display: block;
+        position: relative;
+        width: 50vw;
+        font-size: 15px;
+        right: 9vh;
+    }
+
+    .message-container button {
+        position: relative;
+        text-align: center;
+        width: 50%;
+        padding: 5px;
+        background-color: #fcdc90;
+        color: white;
+        cursor: pointer;
+        border-style: none;
+        border-radius: 25px;
+        font-family: 'web';
+        font-size: 20px;
+        margin-top: 8vh;
+    }
+
+    @keyframes spin1 {
+        100% {transform: rotate(720deg);}
+    }
+    @keyframes spin2 {
+        100% {transform: rotate(-720deg);}
+    }
+
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px){
+    .muteButton {
+        position: fixed;
+        bottom: 12vh;
+        right: 2px;
+        height: 5vh;
+        width: 9vw;
+        border-radius: 25px;
+        z-index: 2;
+    }
+
+
+    #nav {
+        display: none;
+        justify-content: center;
+        position: fixed;
+        bottom: 0vh;
+        width: 100%;
+        z-index: 6;
+    }
+    
+    #nav ul {
+        background-color: #F4C3C2;
+        border-radius: 10px;
+        height: 5vh;
+
+    }
+    
+    #nav ul li {
+        display: inline-block;
+        width: 6vw;
+        padding: 10px 5px;
+        margin-right: 5px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    #nav ul li:hover {
+        background-color: #F3DAD8;
+        transition:ease-in-out 200ms;
+    }
+    #nav ul:hover {
+        transition: ease-in-out;
+    }
+
+    .cover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/Asset/BG/Jawa\ -\ Indonesia\ traditional\ wedding\ costume\ 🇮🇩\ \(1\).jpeg);
+        background-size: cover; 
+        background-position: -15vh;
+        color: #eab72b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(0); /* Initial position */
+        transition: transform 0.5s ease-out; /* Animation effect */
+        z-index: 1000; /* Ensure the cover is above other content */
+    }
+
+    .title-cv p {
+        display: block;
+        position: relative;
+        bottom: 10vh;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        letter-spacing: 5px;
+        color: rgb(255, 255, 255);
+    }
+
+    .cover.slide-up {
+        transform: translateY(-100%); /* Move up off-screen */
+    }
+
+    .close-button {
+        font-family: "Montserrat", sans-serif;
+        transition-duration: 0.5s;
+        padding: 16px 40px;
+        border: 1px solid;
+        border-radius: 5px;
+        border-radius: 10px;
+        border-color: white;
+        background-color: #ffffff5e;
+    }
+
+    .close-button:hover { 
+        padding: 40px 60px;
+        border: 1px solid;
+        border-radius: 5px;
+        border-radius: 10px;
+        border-color: rgb(255, 211, 80);
+        background-color: #ffe38f5e;
+        font-size: 20px;
+    }
+
+    .title-cv img {
+        width: 20vw;
+    }
+
+
+    #date_cv {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        text-decoration: none;
+        letter-spacing: 5px;
+        border-bottom: 3px solid rgb(255, 255, 255);
+    }
+
+    #name_cv {
+        width: 43vw;
+        margin: 10px;
+        font-family: 'jawa';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+        text-decoration: none;
+        letter-spacing: 4px;
+    }
+
+    #content {
+        padding: 20px;
+    }
+
+    #sc_1 {
+        height: 100vh;
+        max-width: 100%;
+        min-height: 100vh;
+        background: url(/Asset/BG/\(1\)Cirrus\ Clouds\ Sisal\ -\ Blanched\ Wallpapers.jpeg);
+        background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    #img_tp_1{
+        width: 40vh;
+        height: 60vh;
+        border-width: 3px;
+        border-style:solid;
+        border-color:rgb(174, 134, 75);
+        border-radius: 0% 0% 250px 250px;
+        padding: 7px;
+        margin-top: -10px;
+    }
+
+    .img-l-top {
+        position: absolute;
+        left: 40px;
+        top: -40px;
+        width: 10vh;
+        z-index: 3;
+        -webkit-animation: spin1 10s linear infinite;
+        -moz-animation: spin1 10s linear infinite;
+        animation: spin1 10s linear infinite;
+    }
+    .img-r-top {
+        position: absolute;
+        right: 40px;
+        top: -40px;
+        width: 10vh;
+        z-index: 2;
+        -webkit-animation: spin2 10s linear infinite;
+        -moz-animation: spin2 10s linear infinite;
+        animation: spin2 10s linear infinite;
+    }
+
+    .img-l-bot {
+        position: fixed;
+        left: 40px;
+        top: 90vh;
+        width: 10vh;
+        z-index: 3;
+        -webkit-animation: spin1 10s linear infinite;
+        -moz-animation: spin1 10s linear infinite;
+        animation: spin1 10s linear infinite;
+        display: none;
+    }
+    .img-r-bot {
+        position: fixed;
+        right: 40px;
+        top: 90vh;
+        width: 10vh;
+        z-index: 3;
+        -webkit-animation: spin2 10s linear infinite;
+        -moz-animation: spin2 10s linear infinite;
+        animation: spin2 10s linear infinite;
+        display: none;
+    }
+    
+    .txt-quote {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        padding: 2vh;
+        font-size: 13px;
+    }
+
+    .flower-bottom-sc1 {
+        display: none;
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        bottom: 5vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    /* Section 2*/
+
+    .sc-2 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background-color: #FAEDCA;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-sc2 {
+        font-family: 'wed';
+        font-size: 5vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+    }
+
+    .flower-bottom-sc2 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 182vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .flower-top-sc2 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc2 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 3*/
+
+    .sc-3 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background-color: #FAEDCA;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-sc3 {
+        font-family: 'wed';
+        font-size: 5vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+    }
+
+    
+
+    .flower-top-sc3 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc3 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 282vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 4 / Akad*/
+
+    .sc-4 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc4 h1 {
+        font-family: 'wed';
+        font-size: 7vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+        padding: 5px;
+    }
+
+    .heading-1-sc4 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 150px 150px 150px 150px;
+        margin: 0px;
+        padding: 40px;
+        top: 10vh;
+    }
+
+
+    .flower-top-sc3 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc4 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 5 / Map*/
+
+    .sc-5 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc5 h1 {
+        font-family: 'wed';
+        font-size: 7vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+        padding: 5px;
+    }
+
+    .heading-1-sc5 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 0px 0px 150px 150px;
+        height: 73vh;
+        margin: 10px;
+        padding: 10px;
+        top: 2vh;
+    }
+
+
+    .flower-top-sc5 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc5 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 6*/
+
+    .sc-6 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background-color: #fffcf5;
+        background: url(/Asset/BG/Photos\ Parchemin\,\ 60\ 000+\ photos\ de\ haute\ qualité\ gratuites.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-sc6 {
+        font-family: 'wed';
+        font-size: 5vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+    }
+
+    
+
+    .flower-top-sc6 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc6 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 282vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top-sc6 {
+        display: inline-block;
+        justify-content: center;
+        width: 50vw;
+        height: 34vh;
+        margin-top: 2vh;
+        padding: 5px;
+        margin-top: 6px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc6 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .slider {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slider:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Section 12*/
+
+    .sc-12 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background-color: #fffcf5;
+        background: url(/Asset/BG/Photos\ Parchemin\,\ 60\ 000+\ photos\ de\ haute\ qualité\ gratuites.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-sc12 {
+        font-family: 'wed';
+        font-size: 5vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+    }
+
+    
+
+    .flower-top-sc12 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc12 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 282vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top-sc12 {
+        display: inline-block;
+        justify-content: center;
+        width: 50vw;
+        height: 34vh;
+        margin-top: 2vh;
+        padding: 5px;
+        margin-top: 6px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc6 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .slider {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slider:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+        /* Section 5 / Map*/
+
+    .sc-5 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc5 h1 {
+        font-family: 'wed';
+        font-size: 7vh;
+        letter-spacing: 5px;
+        font-weight: 400;
+        padding: 5px;
+    }
+
+    .heading-1-sc5 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 0px 0px 150px 150px;
+        height: 73vh;
+        margin: 10px;
+        padding: 10px;
+        top: 2vh;
+    }
+
+
+    .flower-top-sc5 {
+        display: flex;
+        z-index: 5;
+        justify-content: flex-start;
+        width: 100%;
+        top: -40vh;
+        float: top;
+    }
+
+    .flower-bottom-sc5 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    /* Section 7 / Story*/
+
+    .sc-7 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc7 h1 {
+        font-family: 'wed';
+        font-size: 6vh;
+        letter-spacing: 3px;
+        font-weight: 400;
+        padding-top: 3vh;
+        z-index: 1;
+    }
+
+    .heading-1-sc7 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 50px 50px 50px 50px;
+        height: 78vh;
+        margin: 10px;
+        padding: 10px;
+        top: -3vh;
+    }
+
+
+    .flower-top-sc7 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc7 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .story-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding-left: 5vh;
+    }
+    
+    /* Track yang menampung semua slide */
+    .story-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+    }
+    
+    /* Setiap slide */
+    .story-slide {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    /* Gambar di dalam slide */
+    .story-slide img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Deskripsi di bawah gambar */
+    .description {
+        margin-top: 15px;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    /* Tombol navigasi */
+    .prev-button, .next-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 10;
+    }
+    
+    /* Posisi tombol kiri dan kanan */
+    .prev-button {
+        left: 10px;
+    }
+    
+    .next-button {
+        right: 10px;
+    }
+    
+    .prev-button:hover, .next-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Responsive styling */
+    @media screen and (max-width: 768px) {
+        .description {
+            font-size: 14px;
+        }
+    }
+
+    /* Section 8 / RSVP*/
+
+    .sc-8 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/\(1\)Cirrus\ Clouds\ Sisal\ -\ Blanched\ Wallpapers.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc8 h1 {
+        font-family: 'jawa';
+        font-size: 4vh;
+        letter-spacing: 3px;
+        font-weight: 500;
+        padding-top: 3vh;
+        padding: 2vh;
+        z-index: 1;
+    }
+
+    .heading-1-sc8 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #fffcf5;
+        border-radius: 50px 50px 50px 50px;
+        height: 78vh;
+        margin: 10px;
+        padding: 10px;
+        top: -3vh;
+    }
+
+
+    .flower-top-sc8 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc8 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top-sc8 {
+        display: flex;
+        justify-content: center;
+        width: 87vw;
+        margin-top: 1vh;
+        border-radius: 5vh;
+        border-color: rgb(174, 134, 75);
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .btn-rsvp {
+        position: relative;
+        text-align: center;
+        width: 50%;
+        top: 8vh;
+        padding: 8px;
+        background-color: #fcdc90;
+        color: white;
+        cursor: pointer;
+        border-style: none;
+        border-radius: 25px;
+        font-family: 'web';
+        font-size: 20px;
+    }
+    /* RSVP */
+    .btn-rsvp:hover {
+        background-color: #f4cf7a;
+    }
+
+    .popup {
+        display: none; 
+        position: fixed;
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+    }
+    
+    .popup-content {
+        background-color: #fefefe;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; 
+    }
+
+    .popup-content h2 {
+        font-family: 'jawa';
+    }
+
+    .popup-content label {
+        font-family: 'ancient';
+    }
+
+    .popup-content input {
+        border-radius: 10px;
+    }
+
+    .popup-content textarea {
+        display: block;
+        border-radius: 5px;
+        height: 5vh;
+        width: 70vw;
+    }
+
+    .btn-submit {
+        position: relative;
+        text-align: center;
+        width: 50%;
+        padding: 8px;
+        background-color: #fcdc90;
+        color: white;
+        cursor: pointer;
+        border-style: none;
+        border-radius: 25px;
+        font-family: 'web';
+        font-size: 20px;
+    }
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Section 9 / Tamu Species*/
+
+    .sc-9 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc9 h1 {
+        font-family: 'wed';
+        font-size: 6vh;
+        letter-spacing: 3px;
+        font-weight: 400;
+        padding-top: 3vh;
+        z-index: 1;
+    }
+
+    .heading-1-sc9 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 50px 50px 50px 50px;
+        height: 78vh;
+        margin: 10px;
+        padding: 10px;
+        top: -3vh;
+    }
+
+
+    .flower-top-sc9 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc9 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    table,th,td {
+        border: 2px solid rgb(0, 0, 0);
+        border-collapse: collapse;
+        font-size: 20px;
+    }
+    
+
+    td {
+        padding: 10px;
+    }
+
+    th {
+        background-color: #f4cf7a;
+    }
+
+    /* Section 10 / Gift*/
+
+    .sc-10 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc10 h1 {
+        font-family: 'wed';
+        font-size: 6vh;
+        letter-spacing: 3px;
+        font-weight: 400;
+        padding-top: 3vh;
+        margin-top: 5vh;
+        z-index: 1;
+    }
+
+    .box1 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #0056b3;
+        height: 25vh;
+        margin: 10px;
+        padding: 5px;
+        top: -3vh;
+        margin-top: 2vh;
+    }
+
+    .box2 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #0056b3;
+        height: 25vh;
+        margin: 10px;
+        padding: 5px;
+        top: -3vh;
+        margin-top: 11vh;
+    }
+
+
+    .flower-top-sc10 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc10 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .box1 input {
+        display: block;
+        border-style: none;
+        background-color: #FAEDCA;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: #8b7332;
+        right: 5vh;
+        width: 15vw;
+    }
+
+    .box2 input {
+        display: block;
+        border-style: none;
+        background-color: #FAEDCA;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: #8b7332;
+        right: 5vh;
+        width: 15vw;
+    }
+
+
+    .box1 img {
+        position: relative;
+        width: 30vw;
+        bottom: 2vh;
+    }
+
+    .box1 p {
+        display: block;
+        width: 30vw;
+        bottom: 2vh;
+    }
+
+    .box2 img {
+        position: relative;
+        width: 30vw;
+        bottom: 2vh;
+    }
+
+    .box2 p {
+        display: block;
+        width: 30vw;
+        bottom: 2vh;
+    }
+
+
+    #copyButton {
+        padding: 5px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    #copyButton:hover {
+        background-color: #0056b3;
+    }
+
+    /* Section 11 / Letters*/
+
+    .sc-11 {
+        height: 100vh;
+        width: auto;
+        min-height: 100vh;
+        background: url(/Asset/BG/Idem1.jpeg);
+        background-color: #f3dbc2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heading-1-sc11 h1 {
+        position: relative;
+        font-family: 'wed';
+        font-size: 6vh;
+        letter-spacing: 3px;
+        font-weight: 400;
+        padding-top: 3vh;
+        z-index: 1;
+        bottom: 3vh;
+    }
+
+    .heading-1-sc11 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 50px 50px 50px 50px;
+        height: 34vh;
+        margin: 10px;
+        padding: 10px;
+        top: -3vh;
+    }
+
+    .heading-2-sc11 {
+        position: relative;
+        font-family: 'ancient';
+        font-size: 15px;
+        letter-spacing: 2px;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #FAEDCA;
+        border-radius: 50px 50px 50px 50px;
+        height: 34vh;
+        margin: 10px;
+        padding: 10px;
+        top: 10vh;
+    }
+
+    .flower-top-sc11 {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        float: top;
+    }
+
+    .flower-bottom-sc11 {
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        top: 382vh;
+        justify-content: end;
+        transform: scaleY(-1);
+        z-index: 1;
+    }
+
+    .wayang-top {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        margin-top: 5vh;
+        border-radius: 5vh;
+        border-width: 3px;
+        border-color: rgb(174, 134, 75);
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .txt-name {
+        display: block;
+        font-family: 'wed';
+        color: #393E41;
+        text-align: center;
+        padding: 4vh;
+        font-size: 5vh;
+    }
+
+    .txt-quote-sc3 {
+        display: block;
+        font-family: 'ancient';
+        color: #393E41;
+        text-align: center;
+        line-height: 5px;
+    }
+
+    .message-container h2 {
+        display: block;
+        position: relative;
+        width: 70vw;
+        font-size: 15px;
+        right: 3vh;
+    }
+
+    .message-container textarea {
+        display: block;
+        border-radius: 5px;
+        height: 5vh;
+        width: 80vw;
+    }
+
+    .message-container select {
+        display: block;
+        border-radius: 5px;
+        height: 3vh;
+        width: 80vw;
+    }
+
+    .message-container label {
+        display: block;
+        position: relative;
+        width: 50vw;
+        font-size: 15px;
+        right: 9vh;
+    }
+
+    .message-container button {
+        position: relative;
+        text-align: center;
+        width: 50%;
+        padding: 5px;
+        background-color: #fcdc90;
+        color: white;
+        cursor: pointer;
+        border-style: none;
+        border-radius: 25px;
+        font-family: 'web';
+        font-size: 20px;
+        margin-top: 1vh;
+    }
+
+    @keyframes spin1 {
+        100% {transform: rotate(720deg);}
+    }
+    @keyframes spin2 {
+        100% {transform: rotate(-720deg);}
+    }
+}
+
+
+
