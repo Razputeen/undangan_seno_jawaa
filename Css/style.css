@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
     font-family: 'jawa';
-    src: url(/Asset/Assets/JAWAPALSU.TTF);
+    src: url(Asset/Assets/JAWAPALSU.TTF);
 }
 @font-face {
     font-family: 'ancient';
-    src: url(/Asset/Assets/DURALITH.ttf);
+    src: url(Asset/Assets/DURALITH.ttf);
 }
 
 @font-face {
     font-family: 'wed';
-    src: url(/Asset/Assets/AlexBrush-Regular.ttf);
+    src: url(Asset/Assets/AlexBrush-Regular.ttf);
 }
 
 * {
