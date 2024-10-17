@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
     font-family: 'jawa';
-    src: url(Asset/Assets/JAWAPALSU.TTF);
+    src: url(/Asset/Assets/JAWAPALSU.TTF);
 }
 @font-face {
     font-family: 'ancient';
-    src: url(Asset/Assets/DURALITH.ttf);
+    src: url(/Asset/Assets/DURALITH.ttf);
 }
 
 @font-face {
     font-family: 'wed';
-    src: url(Asset/Assets/AlexBrush-Regular.ttf);
+    src: url(/Asset/Assets/AlexBrush-Regular.ttf);
 }
 
 * {
@@ -84,7 +84,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url(Asset/BG/Jawa\ -\ Indonesia\ traditional\ costume\ 🇮🇩.jpeg);
+        background: url(/Asset/BG/Jawa\ -\ Indonesia\ traditional\ costume\ 🇮🇩.jpeg);
         background-size: cover; 
         background-position: -17vh;
         color: #FFFBDB;
@@ -170,7 +170,7 @@ body {
         height: 100vh;
         max-width: 100vh;
         min-height: 100vh;
-        background: url(Asset/BG/\(1\)Cirrus\ Clouds\ Sisal\ -\ Blanched\ Wallpapers.jpeg);
+        background: url(/Asset/BG/\(1\)Cirrus\ Clouds\ Sisal\ -\ Blanched\ Wallpapers.jpeg);
         background-color: rgb(255, 255, 255);
         background-repeat: no-repeat;
         background-size: cover;
